@@ -132,6 +132,18 @@
     
     <dependencies>
         <dependency>
+            <groupId>org.wildfly</groupId>
+            <artifactId>wildfly-clustering-web-infinispan</artifactId>
+            <version>8.1.0.Final</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate</artifactId>
+            <version>3.2.6.ga</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
             <version>7.0</version>
@@ -175,6 +187,19 @@
             <version>2.1</version>
         </dependency>
         
+        <!-- SLF4J -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        
         <!-- |||||| DEPENDÊNCIAS DO HIBERNATE |||||| -->
 
         <!-- ########### HIBERNATE-C3P0 ############ -->
@@ -196,7 +221,8 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>${hibernate.version}</version>            
+            <version>4.3.6.Final</version>
+            <type>jar</type>
         </dependency>
 
         <!-- ########### HIBERNATE ANTLR ########### -->
