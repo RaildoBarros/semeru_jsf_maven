@@ -126,9 +126,13 @@
         <repository>
             <id>jasperreports</id>
             <url>http://repo1.maven.org/maven2/</url>
-        </repository>  
-
-    </repositories>
+        </repository>
+          <repository>
+               <id>unknown-jars-temp-repo</id>
+               <name>A temporary repository created by NetBeans for libraries and jars it could not identify. Please replace the dependencies in this repository with correct ones and delete this repository.</name>
+               <url>file:${project.basedir}/lib</url>
+          </repository>
+     </repositories>
     
     <dependencies>
         <dependency>
@@ -143,7 +147,13 @@
             <version>3.2.6.ga</version>
             <type>jar</type>
         </dependency>
-        <dependency>
+         <dependency>
+              <groupId>unknown.binary</groupId>
+              <artifactId>hibernate-jpamodelgen-4.3.1.Final</artifactId>
+              <version>SNAPSHOT</version>
+              <scope>provided</scope>
+         </dependency>
+         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
             <version>7.0</version>
@@ -299,7 +309,8 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
-            <version>${hibernate.version}</version>            
+            <version>4.3.1.Final</version>
+            <scope>provided</scope>
         </dependency>
                 
         <!-- ########## HIBERNATE-EHCACHE ########## -->
